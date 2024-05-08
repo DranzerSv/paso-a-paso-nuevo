@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .step-title {
+        font-family: Roboto;
+        font-size: 16px;
+        color: #646464;
+        font-size: 16px;
+        line-height: 22.4px;
+        margin: 0px;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        min-width: 343px;
+        max-width: 1280px;
+        margin: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .title {
+        display: none;
+      }
+      .titles {
+        height: 60px;
+      }
+      .title-show {
+        display: block;
+        font-size: 27px;
+        font-weight: 700px;
+        font-family: Roboto;
+        color: #d02d37;
+      }
+      .bars {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 343px;
+        height: 20px;
+        gap: 8px;
+      }
+      .bar {
+        transition-duration: 0.5s;
+        background-color: #fbced1;
+        width: 79.25px;
+        height: 4px;
+        border: none;
+        border-radius: 20px;
+      }
+      .completed {
+        background-color: #d02d37;
+      }
+      .instruction {
+        display: none;
+        justify-content: start;
+        align-items: start;
+
+        min-width: 343px;
+        max-width: 1280px;
+        margin: auto;
+        transition-duration: 0.5s;
+      }
+      .instruction-text {
+        display: flex;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 22.4px;
+        font-family: Roboto;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .mobile-image {
+        display: block;
+      }
+      .desktop-image {
+        display: none;
+      }
+      .show {
+        display: flex;
+        flex-direction: column;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 343px;
+        height: 43px;
+        margin: auto;
+        margin-top: 10px;
+      }
+      .button-back {
+        border: none;
+        background-color: transparent;
+        color: #d02d37;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: underline;
+
+        line-height: 19.2px;
+      }
+      .button-next {
+        width: 167.5px;
+        height: 43;
+        padding: 16px 32px 16px 32px;
+        gap: 10px;
+        border: none;
+        border-radius: 8px 8px 8px 8px;
+        opacity: 0px;
+        background-color: #d02d37;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 700px;
+        line-height: 22.4px;
+        color: #ffffff;
+      }
+      .button-back:hover {
+        color: #ef3a46;
+      }
+      .button-next:hover {
+        background-color: #ef3a46;
+      }
+      @media (min-width: 1024px) {
+        main {
+          padding-left: 40px;
+          padding-top: 20px;
+        }
+        .mobile-image {
+          display: none;
+        }
+        .desktop-image {
+          display: block;
+          width: 1000px;
+        }
+        .buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          width: 343px;
+          height: 43px;
+          margin-left: 130px;
+          margin-top: 20px;
+        }
+        .info {
+          padding: 0px;
+        }
+        .instruction-text {
+          padding: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="info">
+        <p class="step-title">Pasos para disfrutar tu compra</p>
+
+        <div class="titles">
+          <h2 class="title title-show" id="title1">Elige tus productos</h2>
+          <h2 class="title" id="title2">Inicia sesión o registrate</h2>
+          <h2 class="title" id="title3">Elige el método de entrega</h2>
+          <h2 class="title" id="title4">Elige como quieres pagar</h2>
+        </div>
+
+        <div class="bars">
+          <button class="bar completed" id="bar1"></button>
+          <button class="bar" id="bar2"></button>
+          <button class="bar" id="bar3"></button>
+          <button class="bar" id="bar4"></button>
+        </div>
+      </div>
+
+      <section>
+        <div class="instruction show" id="step1">
+          <p class="instruction-text">
+            Explora nuestro amplio catálogo de productos y encuentra lo que
+            buscas.
+          </p>
+          <p class="instruction-text">
+            Agrega los productos que te interesan a tu carrito de compras.
+          </p>
+          <p class="instruction-text">
+            Puedes revisar tu carrito en cualquier momento y modificar las
+            cantidades o eliminar productos.
+          </p>
+          <img src="src/PASO-1-MOB.gif" class="mobile-image" />
+          <img src="src/PASO-1-DESK.gif" class="desktop-image" />
+        </div>
+        <div class="instruction" id="step2">
+          <p class="instruction-text">
+            Si ya tienes una cuenta, inicia sesión con tu correo electrónico y
+            contraseña.
+          </p>
+          <p class="instruction-text">
+            Si eres nuevo cliente, regístrate en solo unos pocos pasos.
+          </p>
+          <p class="instruction-text">
+            Al registrarte, podrás guardar tu información de envío y pago para
+            futuras compras.
+          </p>
+          <img src="src/PASO-2-MOB.gif" class="mobile-image" />
+          <img src="src/PASO-2-DESK.gif" class="desktop-image" />
+        </div>
+        <div class="instruction" id="step3">
+          <p class="instruction-text">
+            Selecciona la opción de envío que mejor se adapte a tus necesidades.
+          </p>
+          <p class="instruction-text">
+            Ofrecemos diferentes opciones de envío, incluyendo envío a
+            domicilio, entrega en tienda y envío express.
+          </p>
+          <p class="instruction-text">
+            Verás el costo de envío antes de finalizar tu compra.
+          </p>
+          <img src="src/PASO-3-MOB.gif" class="mobile-image" />
+          <img src="src/PASO-3-DESK.gif" class="desktop-image" />
+        </div>
+        <div class="instruction" id="step4">
+          <p class="instruction-text">
+            Elige entre diferentes métodos de pago seguros, como Credisiman,
+            tarjeta de crédito, tarjeta de débito y efectivo en tienda.
+          </p>
+          <p class="instruction-text">
+            Ingresa tus datos de pago de forma segura.
+          </p>
+          <p class="instruction-text">
+            Una vez que confirmes tu pago, recibirás un correo electrónico de
+            confirmación con los detalles de tu pedido.
+          </p>
+          <img src="src/PASO-4-MOB.gif" class="mobile-image" />
+          <img src="src/PASO-4-DESK.gif" class="desktop-image" />
+        </div>
+      </section>
+      <div class="buttons">
+        <button class="button-back" id="back-button">Volver</button>
+        <button class="button-next" id="next-button">Siguiente</button>
+      </div>
+    </main>
+
+    <script>
+      let currentStep = 1;
+      const bars = document.querySelectorAll(".bar");
+      const instructions = document.querySelectorAll(".instruction");
+      const titles = document.querySelectorAll(".title");
+      const backButton = document.getElementById("back-button");
+      const nextButton = document.getElementById("next-button");
+
+      const changeTitle = () => {
+        titles.forEach((title) => {
+          if (title.id[5] == currentStep) {
+            title.classList.add("title-show");
+          } else {
+            title.classList.remove("title-show");
+          }
+        });
+      };
+
+      const changeBarStatus = () => {
+        bars.forEach((bar) => {
+          if (bar.id[3] <= currentStep) {
+            bar.classList.add("completed");
+          } else {
+            bar.classList.remove("completed");
+          }
+        });
+      };
+      const changeInstruction = () => {
+        instructions.forEach((instruction) => {
+          if (instruction.id[4] == currentStep) {
+            instruction.classList.add("show");
+          } else {
+            instruction.classList.remove("show");
+          }
+        });
+      };
+
+      backButton.addEventListener("click", () => {
+        if (currentStep > 1) {
+          currentStep -= 1;
+        }
+        changeTitle();
+        changeBarStatus();
+        changeInstruction();
+      });
+      nextButton.addEventListener("click", () => {
+        if (currentStep < 4) {
+          currentStep += 1;
+        }
+        changeTitle();
+        changeBarStatus();
+        changeInstruction();
+      });
+
+      bars.forEach((bar) => {
+        bar.addEventListener("click", function () {
+          currentStep = parseInt(bar.id[3]);
+          changeTitle();
+          changeBarStatus();
+          changeInstruction();
+        });
+      });
+    </script>
+  </body>
+</html>
