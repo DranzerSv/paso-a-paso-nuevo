@@ -25,9 +25,23 @@
         justify-content: start;
         min-width: 343px;
         max-width: 1280px;
-        margin: auto;
+
         padding-left: 10px;
         padding-right: 10px;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        background-color: azure;
+      }
+      .instruction-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        max-width: 1000px;
       }
       .title {
         display: none;
@@ -71,10 +85,9 @@
         display: none;
         justify-content: start;
         align-items: start;
-
         min-width: 343px;
         max-width: 1280px;
-        margin: auto;
+
         transition-duration: 0.5s;
       }
       .instruction-text {
@@ -103,7 +116,7 @@
         align-items: center;
         width: 343px;
         height: 43px;
-        margin: auto;
+
         margin-top: 40px;
       }
       .button-back {
@@ -157,6 +170,9 @@
         .info {
           padding: 0px;
         }
+        .instruction {
+          margin-bottom: 20px;
+        }
         .instruction-text {
           padding: 0px;
         }
@@ -175,33 +191,32 @@
   </head>
   <body>
     <main>
-      <div class="info">
-        <p class="step-title">Pasos para disfrutar tu compra</p>
+      <div class="instruction-container">
+        <div class="info">
+          <p class="step-title">Pasos para disfrutar tu compra</p>
 
-        <div class="titles">
-          <h2 class="title title-show" id="title1">Elige tus productos</h2>
-          <h2 class="title" id="title2">Inicia sesión o registrate</h2>
-          <h2 class="title" id="title3">Elige el método de entrega</h2>
-          <h2 class="title" id="title4">Elige como quieres pagar</h2>
+          <div class="titles">
+            <h2 class="title title-show" id="title1">Elige tus productos</h2>
+            <h2 class="title" id="title2">Inicia sesión o registrate</h2>
+            <h2 class="title" id="title3">Elige el método de entrega</h2>
+            <h2 class="title" id="title4">Elige como quieres pagar</h2>
+          </div>
+
+          <div class="bars">
+            <button class="barButton" id="barButton1">
+              <div class="bar completed" id="bar1"></div>
+            </button>
+            <button class="barButton" id="barButton2">
+              <div class="bar" id="bar2"></div>
+            </button>
+            <button class="barButton" id="barButton3">
+              <div class="bar" id="bar3"></div>
+            </button>
+            <button class="barButton" id="barButton4">
+              <div class="bar" id="bar4"></div>
+            </button>
+          </div>
         </div>
-
-        <div class="bars">
-          <button class="barButton" id="barButton1">
-            <div class="bar completed" id="bar1"></div>
-          </button>
-          <button class="barButton" id="barButton2">
-            <div class="bar" id="bar2"></div>
-          </button>
-          <button class="barButton" id="barButton3">
-            <div class="bar" id="bar3"></div>
-          </button>
-          <button class="barButton" id="barButton4">
-            <div class="bar" id="bar4"></div>
-          </button>
-        </div>
-      </div>
-
-      <section>
         <div class="instruction show" id="step1">
           <p class="instruction-text">
             Explora nuestro amplio catálogo de productos y encuentra lo que
@@ -261,10 +276,10 @@
           <img src="src/PASO-4-MOB.gif" class="mobile-image" />
           <img src="src/PASO-4-DESK.gif" class="desktop-image" />
         </div>
-      </section>
-      <div class="buttons">
-        <button class="button-back" id="back-button">Volver</button>
-        <button class="button-next" id="next-button">Siguiente</button>
+        <div class="buttons">
+          <button class="button-back" id="back-button">Volver</button>
+          <button class="button-next" id="next-button">Siguiente</button>
+        </div>
       </div>
     </main>
 
